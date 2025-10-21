@@ -1,12 +1,12 @@
 package ru.qa.lesson.lesson_3;
 
 public class Product {
-    private final String name;
-    private final String productionDate;
-    private final String manufacturer;
-    private final String countryOfOrigin;
-    private final double price;
-    private final boolean isBooked;
+    private String name;
+    private String productionDate;
+    private String manufacturer;
+    private String countryOfOrigin;
+    private double price;
+    private boolean isBooked;
 
     public Product(String name, String productionDate, String manufacturer,
                    String countryOfOrigin, double price, boolean isBooked) {
