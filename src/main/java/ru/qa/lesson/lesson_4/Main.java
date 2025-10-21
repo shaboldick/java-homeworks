@@ -2,7 +2,7 @@ package ru.qa.lesson.lesson_4;
 
 public class Main {
     public static void main(String[] args) {
-        // Создаём одну миску с едой
+
         FoodBowl bowl = new FoodBowl(20); // начальное количество еды
 
         Animal[] animals = new Animal[5];
@@ -23,7 +23,6 @@ public class Main {
             animal.swim(5);
         }
 
-
         Cat cat1 = (Cat) animals[1];
         Cat cat2 = (Cat) animals[3];
 
@@ -31,15 +30,12 @@ public class Main {
         cat1.eat(10);
         cat2.eat(5);
 
-        // Добавляем ещё еду в миску
         System.out.println("\n=== Добавление еды в миску ===");
         bowl.addFood(10);
 
-        // Пример: кот пытается съесть больше, чем есть
         System.out.println("\n=== Попытка съесть больше еды ===");
         cat1.eat(15);
 
-        // Выводим информацию о котах
         System.out.println("\n=== Информация о котах ===");
         for (Animal animal : animals) {
             if (animal instanceof Cat) {
@@ -48,15 +44,31 @@ public class Main {
             }
         }
 
-        // Выводим оставшуюся еду в миске
         System.out.println("\n=== Остаток еды в миске ===");
         System.out.println("В миске осталось: " + bowl.getFoodAmount() + " еды.");
 
-        // Предложение добавить еду, если её мало
         if (bowl.getFoodAmount() < 10) {
             System.out.println(" В миске мало еды!");
         } else {
             System.out.println(" В миске достаточно еды.");
         }
+
+
+        System.out.println("\n" + "=".repeat(50));
+        System.out.println("=== ГЕОМЕТРИЧЕСКИЕ ФИГУРЫ ===");
+        System.out.println("=".repeat(50));
+
+        Circle circle = new Circle(5.0);
+        Rectangle rectangle = new Rectangle(4.0, 6.0);
+        Triangle triangle = new Triangle(3.0, 4.0, 5.0);
+
+        System.out.println("Круг:");
+        circle.printInfo();
+
+        System.out.println("Прямоугольник:");
+        rectangle.printInfo();
+
+        System.out.println("Треугольник:");
+        triangle.printInfo();
     }
 }
