@@ -11,7 +11,6 @@ public abstract class Animal {
         this.maxSwimDistance = maxSwimDistance;
     }
 
-    // 👇 Добавляем геттер
     public String getName() {
         return name;
     }
