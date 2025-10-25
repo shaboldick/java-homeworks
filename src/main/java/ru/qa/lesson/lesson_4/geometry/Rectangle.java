@@ -1,4 +1,4 @@
-package ru.qa.lesson.lesson_4;
+package ru.qa.lesson.lesson_4.geometry;
 
 public class Rectangle implements Figure {
     private double width;
@@ -6,11 +6,11 @@ public class Rectangle implements Figure {
     private String fillColor;
     private String borderColor;
 
-    public Rectangle(double width, double height) {
+    public Rectangle(String fillColor, String borderColor, double width, double height) {
+        this.fillColor = fillColor;
+        this.borderColor = borderColor;
         this.width = width;
         this.height = height;
-        this.fillColor = "green";
-        this.borderColor = "yellow";
     }
 
     @Override
@@ -31,5 +31,10 @@ public class Rectangle implements Figure {
     @Override
     public String getBorderColor() {
         return borderColor;
+    }
+
+    @Override
+    public String toString() {
+        return "Прямоугольник (цвет фона: " + fillColor + ", цвет границы: " + borderColor + ")";
     }
 }

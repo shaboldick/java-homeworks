@@ -1,14 +1,14 @@
-package ru.qa.lesson.lesson_4;
+package ru.qa.lesson.lesson_4.geometry;
 
 public class Circle implements Figure {
     private double radius;
     private String fillColor;
     private String borderColor;
 
-    public Circle(double radius) {
+    public Circle(String fillColor, String borderColor, double radius) {
+        this.fillColor = fillColor;
+        this.borderColor = borderColor;
         this.radius = radius;
-        this.fillColor = "blue";
-        this.borderColor = "red";
     }
 
     @Override
@@ -29,5 +29,10 @@ public class Circle implements Figure {
     @Override
     public String getBorderColor() {
         return borderColor;
+    }
+
+    @Override
+    public String toString() {
+        return "Круг (цвет фона: " + fillColor + ", цвет границы: " + borderColor + ")";
     }
 }

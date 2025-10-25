@@ -1,12 +1,13 @@
 package ru.qa.lesson.lesson_4;
 
+import ru.qa.lesson.lesson_4.tests.AnimalTest;
+import ru.qa.lesson.lesson_4.tests.GeometryTest;
+
 public class Main {
     public static void main(String[] args) {
-        // Запуск зоопарка
-        Zoo zoo = new Zoo();
-        zoo.runSimulation();
+        AnimalTest.testCatsAndFoodBowl();
+        AnimalTest.testDog();
 
-        // Запуск демонстрации фигур
-        GeometryDemo.runDemo();
+        GeometryTest.testFigures();
     }
 }
